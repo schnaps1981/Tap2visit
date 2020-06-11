@@ -1,4 +1,4 @@
-package com.test.tap2visit.di.modules
+package com.test.tap2visit.app.di.modules
 
 import android.content.Context
 import dagger.Module

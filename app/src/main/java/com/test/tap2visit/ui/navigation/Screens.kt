@@ -1,6 +1,5 @@
-package com.test.tap2visit.navigation
+package com.test.tap2visit.ui.navigation
 
-import androidx.fragment.app.Fragment
 import com.test.tap2visit.ui.fragments.NewsDetailFragment
 import com.test.tap2visit.ui.fragments.NewsListFragment
 import ru.terrakok.cicerone.android.support.SupportAppScreen

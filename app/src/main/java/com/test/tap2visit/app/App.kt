@@ -2,9 +2,9 @@ package com.test.tap2visit.app
 
 import android.app.Application
 import com.test.tap2visit.BuildConfig
-import com.test.tap2visit.di.modules.AppComponent
-import com.test.tap2visit.di.modules.ContextModule
-import com.test.tap2visit.di.modules.DaggerAppComponent
+import com.test.tap2visit.app.di.modules.AppComponent
+import com.test.tap2visit.app.di.modules.ContextModule
+import com.test.tap2visit.app.di.modules.DaggerAppComponent
 import timber.log.Timber
 import timber.log.Timber.DebugTree
 

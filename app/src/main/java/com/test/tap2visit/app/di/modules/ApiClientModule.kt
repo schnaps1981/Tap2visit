@@ -1,14 +1,10 @@
-package com.test.tap2visit.di.modules
+package com.test.tap2visit.app.di.modules
 
-import android.provider.SyncStateContract
-import com.google.gson.Gson
-import com.google.gson.GsonBuilder
 import com.jakewharton.retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import com.test.tap2visit.app.Constants
 import com.test.tap2visit.network.api.ApiInterface
 import dagger.Module
 import dagger.Provides
-import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
