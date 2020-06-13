@@ -69,7 +69,8 @@ class NewsListPresenter : MvpPresenter<NewsListView>() {
 
     fun applyNewCategory(category: Categories) {
         currentCategory = category
-        paginator.refresh()
+        //paginator.refresh()
+        paginator.init()
     }
 
     fun refreshNews() = paginator.refresh()
@@ -81,6 +82,6 @@ class NewsListPresenter : MvpPresenter<NewsListView>() {
     }
 
     fun openNewsDetails() {
-        router.replaceScreen(Screens.NewsDetailNav())
+        router.navigateTo(Screens.NewsDetailNav())
     }
 }

@@ -1,8 +1,9 @@
 package com.test.tap2visit
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import com.test.tap2visit.app.App
+import com.test.tap2visit.ui.fragments.NewsDetailFragment
 import com.test.tap2visit.ui.navigation.Screens
 import ru.terrakok.cicerone.Navigator
 import ru.terrakok.cicerone.NavigatorHolder
@@ -36,8 +37,11 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onBackPressed() {
-        super.onBackPressed()
+
+        val currentFragment = supportFragmentManager.findFragmentById(R.id.fl_mainframe)
+        if (currentFragment is NewsDetailFragment) {
+            router.backTo(Screens.NewsListNav())
+        } else super.onBackPressed()
 
     }
-
 }

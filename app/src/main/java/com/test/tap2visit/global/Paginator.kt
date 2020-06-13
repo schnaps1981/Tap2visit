@@ -26,6 +26,16 @@ class Paginator<T>(
     private val currentData = mutableListOf<T>()
     private var disposable: Disposable? = null
 
+    fun init()
+    {
+        currentState = EMPTY()
+        currentPage = 0
+        currentData.clear()
+        disposable = null
+        viewController.showData(true, currentData)
+        currentState.refresh()
+    }
+
     fun refresh() {
         currentState.refresh()
     }

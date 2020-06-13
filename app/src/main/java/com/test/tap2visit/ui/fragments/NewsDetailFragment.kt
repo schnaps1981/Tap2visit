@@ -2,8 +2,6 @@ package com.test.tap2visit.ui.fragments
 
 import android.os.Bundle
 import android.view.View
-import android.webkit.DownloadListener
-import androidx.activity.OnBackPressedCallback
 import androidx.fragment.app.setFragmentResultListener
 import com.test.tap2visit.R
 import com.test.tap2visit.app.App
@@ -11,19 +9,17 @@ import com.test.tap2visit.app.Constants
 import com.test.tap2visit.mvp.presenters.NewsDetailPresenter
 import com.test.tap2visit.mvp.views.NewsDetailsView
 import com.test.tap2visit.network.entity.Article
-import kotlinx.android.synthetic.main.news_deatails.*
+import kotlinx.android.synthetic.main.news_details.*
 import moxy.MvpAppCompatFragment
 import moxy.presenter.InjectPresenter
-import timber.log.Timber
-import javax.inject.Inject
 
-class NewsDetailFragment : MvpAppCompatFragment(R.layout.news_deatails), NewsDetailsView {
+class NewsDetailFragment : MvpAppCompatFragment(R.layout.news_details), NewsDetailsView {
 
     @InjectPresenter
     lateinit var presenter: NewsDetailPresenter
 
-    companion object{
-        fun getInstance() : NewsDetailFragment = NewsDetailFragment()
+    companion object {
+        fun getInstance(): NewsDetailFragment = NewsDetailFragment()
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
