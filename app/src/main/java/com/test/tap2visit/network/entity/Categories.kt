@@ -7,5 +7,7 @@ enum class Categories(val categoryName : String) {
     HEALTH("health"),
     SCIENCE("science"),
     SPORTS("sports"),
-    TECHNOLOGY("technology")
+    TECHNOLOGY("technology"),
+    NO_CATEGORY("")
 }
+

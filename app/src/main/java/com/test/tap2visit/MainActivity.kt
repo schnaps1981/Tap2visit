@@ -3,7 +3,6 @@ package com.test.tap2visit
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.test.tap2visit.app.App
-import com.test.tap2visit.mvp.models.RecieveNews
 import com.test.tap2visit.ui.navigation.Screens
 import ru.terrakok.cicerone.Navigator
 import ru.terrakok.cicerone.NavigatorHolder
@@ -34,6 +33,11 @@ class MainActivity : AppCompatActivity() {
     override fun onPause() {
         navigatorHolder.removeNavigator()
         super.onPause()
+    }
+
+    override fun onBackPressed() {
+        super.onBackPressed()
+
     }
 
 }

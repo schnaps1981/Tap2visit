@@ -1,10 +1,10 @@
-package com.test.tap2visit.network.api.entity
+package com.test.tap2visit.network.entity
 
 import com.google.gson.annotations.SerializedName
-import com.test.tap2visit.network.api.entity.Article
+import com.test.tap2visit.network.entity.Article
 
 data class NewsItems(
-    @SerializedName("status") val status: String,
-    @SerializedName("totalResults") val totalResults: Int,
-    @SerializedName("articles") val articles: ArrayList<Article>?
+    val articles: List<Article>,
+    val status: String,
+    val totalResults: Int
 )

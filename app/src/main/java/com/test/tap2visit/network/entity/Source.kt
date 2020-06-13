@@ -1,10 +1,12 @@
-package com.test.tap2visit.network.api.entity
+package com.test.tap2visit.network.entity
 
 import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
 import kotlinx.android.parcel.Parcelize
+import kotlinx.android.parcel.RawValue
 
+@Parcelize
 data class Source (
-    @SerializedName("id") val id : String?,
-    @SerializedName("name") val name : String?
-)
+    val id: @RawValue Any,
+    val name: String
+) : Parcelable

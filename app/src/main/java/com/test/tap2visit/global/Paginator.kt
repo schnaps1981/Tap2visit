@@ -2,6 +2,7 @@ package com.test.tap2visit.global
 
 import io.reactivex.Single
 import io.reactivex.disposables.Disposable
+import timber.log.Timber
 
 class Paginator<T>(
     private val requestFactory: (Int) -> Single<List<T>>,
@@ -18,7 +19,7 @@ class Paginator<T>(
         fun showPageProgress(show: Boolean)
     }
 
-    private val FIRST_PAGE = 0
+    private val FIRST_PAGE = 1
 
     private var currentState: State<T> = EMPTY()
     private var currentPage = 0
